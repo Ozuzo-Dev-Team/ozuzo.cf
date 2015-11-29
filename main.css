@@ -21,36 +21,32 @@ html,body { height:100%; }
 	-webkit-transform: translateX(0%) rotateY(0deg) translateZ(0px);
 		transform: translateX(0%) rotateY(0deg) translateZ(0px);
 }
-#m{
-	position: fixed;
-	/*right: 25%;*/
-	/*top: 10%;*/
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-	margin-left: 15px;
+
+#m {
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    margin-left: 15px;
 }
-#m > .fa-times{
-	position: absolute;
-	bottom: 10px;
-	right: 25px;
-	font-size: 5em;
-	z-index: 101;
+
+#m > .fa-times {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 5em;
+    z-index: 101;
 }
 #m > i{
 	color: #fff;
 
 }
-@media screen and (max-width: 31em), screen and (max-height: 36.2em){
-#m {
-    right: auto;
-    /*left: 0%;*/
+#m > p {
+    padding-bottom: 10%;
 }
-#m > i{
-	color: #fff;
-	font-size: 23px;
-}
-}
+
 /*
 #w:before {
 	content: "";
@@ -111,4 +107,38 @@ a:hover{
 }
 #small{
 	font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+
+#m {
+    right: auto;
+    /*left: 0%;*/
+}
+#w{
+	color: red;
+}
+#m > i{
+	color: #fff;
+	font-size: 23px;
+}
+#m > .fa-times {
+    position: absolute;
+top: 70%;
+    left: 35%;
+    font-size: 5em;
+    z-index: 101;
+}
+#m{
+	position: fixed;
+	/*right: 25%;*/
+	/*top: 10%;*/
+	left: 0%; */
+   top: 0%;
+	 top: 10%;
+
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	margin-left: 15px;
+}
 }
