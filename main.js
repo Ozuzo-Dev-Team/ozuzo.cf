@@ -17,7 +17,7 @@ function change(){
 }
 var isshowmenu=0;
 function reg(){
-  $("#m > .fa-times").live("click",function(){
+  $("#m > .fa-times").on("click",function(){
 if(isshowmenu==1){
   isshowmenu=0;
   $({  borderSpacing: 10 }).animate({  borderSpacing: 0 }, {
@@ -25,12 +25,16 @@ if(isshowmenu==1){
         $('#w').css({
                   "-webkit-filter": "blur("+now+"px)",
                   "filter": "blur("+now+"px)",
-                  "-ms-filter": "blur("+now+"px)"
+                  "-ms-filter": "blur("+now+"px)",
+                  "-moz-filter":"blur("+now+"px)"
               });
       },
       complete: function(){
         $("#m").fadeOut(500);
-        $("#m > .fa-times").die("click");
+        $("#w").hide();
+        $("#w").css("filter","");
+        $("#w").fadeIn();
+        $("#m > .fa-times").off("click");
       },
 
       duration:'slow'
@@ -49,7 +53,8 @@ $(function(){
           $('#w').css({
                     "-webkit-filter": "blur("+now+"px)",
                     "filter": "blur("+now+"px)",
-                    "-ms-filter": "blur("+now+"px)"
+                    "-ms-filter": "blur("+now+"px)",
+                    "-moz-filter":"blur("+now+"px)"
                 });
         },
         complete: function(){
@@ -67,11 +72,15 @@ $(function(){
           $('#w').css({
                     "-webkit-filter": "blur("+now+"px)",
                     "filter": "blur("+now+"px)",
-                    "-ms-filter": "blur("+now+"px)"
+                    "-ms-filter": "blur("+now+"px)",
+                    "-moz-filter":"blur("+now+"px)"
                 });
         },
         complete: function(){
           $("#m").fadeOut(500);
+          $("#w").hide();
+          $("#w").css("filter","");
+          $("#w").fadeIn();
         },
 
         duration:'slow'

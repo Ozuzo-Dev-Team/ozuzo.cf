@@ -20,6 +20,7 @@ html,body { height:100%; }
 .f{
 	-webkit-transform: translateX(0%) rotateY(0deg) translateZ(0px);
 		transform: translateX(0%) rotateY(0deg) translateZ(0px);
+	-moz-filter:blur(0px);
 }
 
 #m {
